@@ -1,0 +1,39 @@
+Q: What are some of the problems in software development?
+A: unclear and ever-changing requirements
+Source: 17. Problems in software development include unclear and ever-changing requirements, inadequate communication, confidentiality issues, many bugs, flawed final products, and hidden costs.
+
+Q: What is important because of its potential to create innovation?
+A: Software design
+Source: 18. Software design is important because of its potential to create innovation, advance technology, solve problems, and provide career opportunities.
+
+Q: What involves gathering requirements, designing a solution, implementing the solution?
+A: The software development process
+Source: 21. The software development process involves gathering requirements, designing a solution, implementing the solution, testing, deployment, maintenance, and support.
+
+Q: What type of modules are included in the design phase?
+A: control relationships
+Source: 14. The design phase includes specifying modules, control relationships among modules, interfaces, data structures, and algorithms.
+
+Q: What does the 19-year-old foster?
+A: job security
+Source: 19. It fosters job security, global connectivity, automation, efficiency, creativity, adaptability, critical thinking, logical reasoning, entrepreneurial opportunities, and community collaboration.
+
+Q: What is the process result of planning, specifying, and forming a prototype, product or process?
+A: Software design
+Source: 1. Software design is the process result of planning, specifying, and forming a prototype, product, or process.
+
+Q: Who is responsible for translating a design into product?
+A: the development team
+Source: 7. Translating a design into a product almost always involves communication between designers and the development team.
+
+Q: What does the form of an artifact implicitly incorporate?
+A: design activity
+Source: 3. Producing the form of an artifact implicitly incorporates elements of design activity, whether explicitly appreciated or not.
+
+Q: What transforms user requirements into a suitable form to help programmers implement coding?
+A: The software design process
+Source: 13. The software design process transforms user requirements into a suitable form to help programmers implement coding.
+
+Q: What is correctness, efficiency, understandability and completeness?
+A: software design
+Source: 15. Objectives of software design include correctness, efficiency, understandability, completeness, and maintainability.

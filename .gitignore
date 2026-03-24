@@ -1,0 +1,7 @@
+__pycache__/
+*.pkl
+*.joblib
+models/
+results/
+data/
+.env

@@ -1,0 +1,42 @@
+﻿Sentence,Label,ML_Score,TextRank_Score
+Here is the cleaned and structured text as a list of proper sentences:,0,0.761921359842846,0.02440898220106844
+"In the early days of software, Tom Kilburn, a computer scientist, was responsible for writing the world’s first piece of software, which ran on June 21, 1948, at the University of Manchester, England.",1,0.977998282512334,0.02446362741894321
+"The first piece of software took 52 minutes to correctly compute the greatest divisor of 2 raised to the power 18 (262,144).",0,0.5565045536783265,0.0244039711995836
+Fortran was one of the first higher-level programming languages and was originally published in 1957.,1,0.9678863888110368,0.024502048452272638
+"John Tukey, a statistician, coined the word software in an article about computer programming.",0,0.5687229209085701,0.024545076891704806
+"During the personal computing era of the 1970s and 1980s, software gained prominence with the arrival of personal computers.",0,0.9407886270481168,0.024519407476738187
+"Apple released the Apple II, a revolutionary product, to the public in April 1977.",0,0.9175538108495561,0.02449114637502174
+"VisiCalc, the first spreadsheet software for professional computing, became popularly known as the Apple II’s killer app and first appeared in 1979.",1,0.9809524848110711,0.02451773760329306
+Open-source software emerged as a major innovation in the history of software development and entered the mainstream in the 1990s.,1,0.9910402763357749,0.024468274327833165
+"The Linux kernel became the basis for the open-source Linux operating system, which was released in 1991.",0,0.8410098590029199,0.02444677733116057
+Java was released by Sun Microsystems in 1995.,0,0.8046301973544564,0.02450210905149294
+"The world’s first mobile phone call was made on April 3, 1973.",0,0.37344069858004175,0.024496716253143546
+"In 1993, IBM released the first publicly available smartphone.",0,0.36842892034508984,0.02453704679520515
+"In 1996, the Palm OS hit the market, bringing PDAs to the masses.",0,0.7263708756218129,0.02446374391984069
+"In 1999, RIM released the first BlackBerry 850 device, which quickly became one of the world’s fastest-growing companies.",0,0.7442713551222003,0.02452224168681222
+"In 2007, Apple changed computing with the release of the iPhone.",0,0.9319890721071454,0.024463913016964364
+"Designing is the process of creating a plan, a specification, or a form to implement a system, product, or process.",0,0.8404079410057259,0.02433673112062542
+Making and using tools is a fundamental human characteristic that incorporates elements of design activity.,1,0.970728098766421,0.024446690666828565
+Software development artifacts help describe the architecture and design functions of software.,1,0.979023516144364,0.02449838493853105
+"Software development artifacts may include roadmaps, databases, data models, printed documents, or scripts.",0,0.7928152657931701,0.02408980995345917
+Translating a design into a product almost always requires communication between designers and development teams.,1,0.9789688144584929,0.024507919989288883
+The design process produces various artifacts that have broad applications and influence.,0,0.8565880951230058,0.02448136515866271
+"Problem-solving in design involves defining the problem, determining its cause, identifying solutions, selecting an alternative, and implementing the solution.",1,0.9910597769546312,0.024350774700317795
+Abstraction plays a key role in software design by simplifying details and focusing on essential elements.,1,0.9685287771950831,0.024425595973760737
+Abstraction hides unnecessary details while displaying relevant attributes of objects.,0,0.884656014320998,0.024145341618315292
+A wicked problem is a problem where the solution or its aspects can change the nature of the problem itself.,0,0.9623696501390447,0.024172312191200206
+"Software is a set of instructions, data, or programs used to operate computers and execute specific tasks.",1,0.9716151381693499,0.024531237838857994
+The software design process transforms user requirements into a suitable form that helps programmers in coding and implementation.,0,0.9532490310201179,0.024480020857624758
+"During the design phase, items such as modules, control relationships, interfaces, data structures, and algorithms are designed and documented.",0,0.7916285246411882,0.024135815416783283
+"Objectives of software design include correctness, efficiency, understandability, completeness, and maintainability.",1,0.9645373678187008,0.02378853632293895
+Software design concepts refer to the ideas and principles behind the design.,0,0.7902371164230362,0.02450881427695724
+One common issue in software development is unclear or ever-changing software requirements.,0,0.9039357411957291,0.02446211862108343
+Inadequate communication can also lead to software development problems.,0,0.7662938068612516,0.024246119445143256
+Confidentiality of information is another key challenge in software design.,0,0.7647452078758742,0.024360346520448738
+Bugs and flaws in the final product are common problems encountered in software development.,0,0.7622859839237958,0.024423557915086092
+Hidden costs can also become a challenge in software projects.,0,0.7185079908610453,0.02428737358559809
+"Software design is important and worth learning for innovation, technological advancement, and problem-solving skills.",0,0.9626612025394582,0.02438702220730766
+"The field provides career opportunities, job security, and adaptability to changing environments.",0,0.8754081935167227,0.02443305196523911
+"It fosters creativity, logical reasoning, and entrepreneurial opportunities.",0,0.7082010435023295,0.0239255155158297
+It encourages collaboration and community engagement in solving modern issues.,0,0.7679075352350981,0.02453863349955604
+"Software development is a cooperative activity carried out between humans and computers to create solutions through requirements gathering, design, implementation, testing, deployment, and maintenance.",1,0.9877140933911065,0.024284089699477453

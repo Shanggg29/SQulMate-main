@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQuLMate</title>
+
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts - Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+            background: linear-gradient(120deg, #f7d7e9, #cfe8ff, #e8f9d7);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 8rem;
+            font-weight: 700;
+            color: #3d2b5f;
+        }
+
+        .hero-text {
+            font-size: 1.5rem;
+            color: #4e4b62;
+            margin-top: 15px;
+        }
+
+        .btn-primary-custom {
+            background-color: white;
+            padding: 12px 70px;
+            font-weight: 600;
+            border-radius: 30px;
+            border: none;
+            color: #3d2b5f;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #f7f7f7;
+        }
+
+        .hero-img {
+            max-width: 480px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row align-items-center">
+        
+        <!-- LEFT TEXT -->
+        <div class="col-md-6">
+            <h1 class="hero-title">SQuLMate</h1>
+            <a href="/summary" class="btn-primary-custom mt-3">START SUMMARIZING</a>
+            <p class="hero-text mt-4">
+                Simplifying your lessons<br>
+                through summaries and questions.
+        </p>
+    </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="col-md-6 text-center">
+            <img src="/static/START.png" alt="Hero Image" class="hero-img">
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

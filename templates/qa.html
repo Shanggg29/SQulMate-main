@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcard Q&A</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0e6ff, #fff2e6, #e6f7ff);
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+}
+h2 {
+    color: #4b2e83;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.flip-card { perspective: 1000px; margin-bottom: 20px; }
+.flip-inner {
+    position: relative;
+    width: 100%;
+    min-height: 190px;
+    height: auto;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.flip-card.flipped .flip-inner { transform: rotateY(180deg); }
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    min-height: 190px;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+.flip-front { background: white; color: #4b2e83; }
+.flip-back { background: #4b2e83; color: white; transform: rotateY(180deg); }
+.icon { font-size: 35px; margin-bottom: 10px; flex-shrink: 0; }
+.card-text {
+    line-height: 1.4;
+    max-width: 100%;
+}
+#loading-message {
+    text-align: center;
+    font-size: 20px;
+    color: #4b2e83;
+    margin-bottom: 20px;
+    display: none;
+}
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background:white;
+    border:none;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:transform 0.2s;
+    z-index:9999;
+}
+.back-btn:hover { transform: scale(1.05); }
+.back-btn span { font-size: 24px; }
+
+/* Modal styles */
+#questionModal {
+    position: fixed;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    z-index: 9999;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+}
+.modal-content h3 {
+    color: #4b2e83;
+    margin-bottom: 20px;
+}
+.modal-content select {
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.modal-content button {
+    background: #4b2e83;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modal-content button:hover {
+    background: #6a4db3;
+}
+</style>
+</head>
+
+<body>
+
+<button class="back-btn" onclick="goBack()"><span>←</span></button>
+<h2>Generated Questions</h2>
+
+<div id="loading-message">Generating Questions, please wait...</div>
+
+<div class="container">
+    <div class="row g-4" id="flashcard-container">
+        <!-- Flashcards will appear here -->
+    </div>
+</div>
+
+<!-- Modal for number of questions -->
+<div id="questionModal">
+    <div class="modal-content">
+        <h3>How many questions do you want?</h3>
+        <select id="numQuestionsSelect">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button onclick="confirmNumQuestions()">OK</button>
+    </div>
+</div>
+
+<script>
+// Flip card function
+function flipCard(card) {
+    card.classList.toggle("flipped");
+}
+
+// Back to summary page
+function goBack() {
+    // Set flag so summary page knows we're coming back from QA
+    sessionStorage.setItem("from_summary_page", "true");
+    window.location.href = "/summary";
+}
+
+let selectedNumQuestions = 5; // default
+
+function confirmNumQuestions() {
+    const select = document.getElementById("numQuestionsSelect");
+    selectedNumQuestions = parseInt(select.value);
+    document.getElementById("questionModal").style.display = "none";
+    generateFlashcards(selectedNumQuestions);
+}
+
+// Load QA data from sessionStorage
+window.addEventListener('DOMContentLoaded', () => {
+    const qaText = sessionStorage.getItem("qa_data");
+    if (!qaText) {
+        document.getElementById("flashcard-container").innerHTML = "<p>No Q&A data found. Go back and generate questions first.</p>";
+        return;
+    }
+
+    // Show modal to select number of questions
+    document.getElementById("questionModal").style.display = "flex";
+});
+
+function generateFlashcards(numQuestions) {
+    const qaText = sessionStorage.getItem("qa_data");
+    if (!qaText) return;
+
+    const container = document.getElementById("flashcard-container");
+    const loading = document.getElementById("loading-message");
+
+    loading.style.display = "block";
+
+    setTimeout(() => {
+        loading.style.display = "none";
+
+        let qaPairs = qaText.trim().split("\n\n").filter(p => p.trim() !== "");
+        qaPairs.sort(() => Math.random() - 0.5);
+        qaPairs = qaPairs.slice(0, numQuestions);
+
+        container.innerHTML = "";
+
+        qaPairs.forEach(pair => {
+            const [qLine, aLine] = pair.split("\n");
+            const question = qLine.replace(/^Q:\s*/, "");
+            const answer = aLine ? aLine.replace(/^A:\s*/, "") : "";
+
+            const col = document.createElement("div");
+            col.className = "col-md-4";
+
+            col.innerHTML = `
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <i class="bi bi-question-circle icon"></i>
+                        <div class="card-text">${question}</div>
+                    </div>
+                    <div class="flip-back">
+                        <i class="bi bi-lightbulb-fill icon"></i>
+                        <div class="card-text">${answer}</div>
+                    </div>
+                </div>
+            </div>
+            `;
+            container.appendChild(col);
+        });
+
+        // Adjust card heights after rendering
+        adjustCardHeights();
+    }, 500);
+}
+
+// Function to adjust card heights based on content
+function adjustCardHeights() {
+    const cards = document.querySelectorAll('.flip-card');
+    
+    cards.forEach(card => {
+        const flipInner = card.querySelector('.flip-inner');
+        const front = card.querySelector('.flip-front');
+        const back = card.querySelector('.flip-back');
+        
+        // Get the natural height of both sides
+        const frontHeight = front.scrollHeight;
+        const backHeight = back.scrollHeight;
+        
+        // Use the larger of the two heights
+        const maxHeight = Math.max(frontHeight, backHeight, 190);
+        
+        // Set the height
+        flipInner.style.height = maxHeight + 'px';
+    });
+}
+</script>
+
+</body>
+</html>

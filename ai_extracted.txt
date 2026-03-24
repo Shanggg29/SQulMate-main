@@ -1,0 +1,31 @@
+Here is the cleaned text as a list of sentences:
+
+1. Software design is the activity and process of creating a plan, specification, prototype, product, or system.
+2. Early software history began with Tom Kilburn, who wrote the world’s first piece of software, which ran on June 21, 1948, at the University of Manchester, England.
+3. The first piece of software took 52 minutes to correctly compute the greatest divisor of 2 to the power of 18 (262,144).
+4. Fortran was one of the first higher-level programming languages, originally published in 1957.
+5. The term “software” was coined by John Tukey, a statistician, in an article about computer programming.
+6. The personal computing era of the 1970s and 1980s marked the arrival of personal computers, such as Apple’s revolutionary Apple II in April 1977.
+7. VisiCalc, the first spreadsheet software, became known as the Apple II’s killer app and was written in a specialized assembly language in 1979.
+8. Open-source software entered the mainstream in the 1990s, with the Linux kernel forming the basis of the Linux operating system released in 1991.
+9. The Java programming language was released by Sun Microsystems in 1995.
+10. The world’s first mobile phone call was made on April 3, 1973.
+11. In 1993, IBM released the first publicly available smartphone, followed by Palm OS in 1996, which brought PDAs to the masses.
+12. In 1999, RIM released its first Blackberry 850 device, which quickly became one of the world’s fastest-growing companies.
+13. Apple transformed computing with the release of the iPhone in 2007.
+14. Designing software involves creating artifacts such as roadmaps, databases, data models, printed documents, and scripts that help describe the architecture and design functions.
+15. Artifacts are byproducts of software development and are used to trace the entire development process.
+16. Communication is a distinguishing characteristic of human beings and is essential for translating design ideas into products.
+17. The design process produces various artifacts and outcomes that extensively influence human lives.
+18. The purpose of design is to produce a solution to a problem, and abstraction plays a key role in defining, prioritizing, and implementing solutions.
+19. Abstraction in software design hides unnecessary details while highlighting attributes relevant to the user.
+20. A wicked problem is characterized by its form and solution being interconnected so that solving one aspect affects the problem itself.
+21. Software is a set of instructions, data, or programs used to operate computers and perform specific tasks.
+22. The software design process transforms user requirements into a form suitable for coding and implementation.
+23. The design phase involves envisioning and defining solutions, designing modules, specifying control relationships, defining interfaces, structuring data, and creating necessary algorithms.
+24. Objectives of software design include correctness, efficiency, understandability, completeness, and maintainability.
+25. Software design concepts are the principal ideas that form the basis of design.
+26. Problems in software development include unclear requirements, inadequate communication, confidentiality issues, bugs in final products, and hidden costs.
+27. Learning software design is important for innovation, technology advancement, problem-solving, career opportunities, automation, creativity, adaptability, critical thinking, logical reasoning, and entrepreneurial opportunities.
+28. The software development field is in high demand globally.
+29. Software development is a cooperative process between humans and computers that involves requirements gathering, designing solutions, implementation, testing, deployment, maintenance, and support.
